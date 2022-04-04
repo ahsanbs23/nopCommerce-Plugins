@@ -1,0 +1,12 @@
+﻿{
+  "Group": "Product Promotions",
+  "FriendlyName": "Product Promotions",
+  "SystemName": "Nop.Plugin.Misc.ProductPromotions",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "nopCommerce team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Misc.ProductPromotions.dll",
+  "Description": "This plugin enables to show all the discounts or promotions of product"
+
+}

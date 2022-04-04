@@ -1,0 +1,37 @@
+﻿@model Nop.Plugin.Misc.ProductPromotions.Models.ProductPromotionsListModel
+
+<h2>Promotions</h2>
+<br><br>
+@if (@Model.Promotions[0].Success)
+{
+    @foreach (var item in @Model.Promotions)
+    {
+        @Html.DisplayFor(modelItem => item.Name)
+        <br>
+             
+        @if(item.UsePercentage)
+        {
+            <p>Discount Percentage: </p>
+            @Html.DisplayFor(modelItem => item.DiscountPercentage)
+        }
+        
+        <p>Discount Amount: </p>
+        @Html.DisplayFor(modelItem => item.DiscountAmount)
+
+        <br>
+        @if (item.RequiresCouponCode)
+        {
+            <p>Coupon Code: </p>
+            @Html.DisplayFor(modelItem => item.CouponCode)
+        }
+        
+        <br><br>
+    }
+}
+@if (!@Model.Promotions[0].Success)
+{
+    <p>
+        @Model.Promotions[0].Errors[0]
+    </p>
+}
+
